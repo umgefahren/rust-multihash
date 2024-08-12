@@ -1,7 +1,9 @@
 #[cfg(not(feature = "std"))]
-use core2::{error::Error as StdError, io};
+use core2::io;
 #[cfg(feature = "std")]
-use std::{error::Error as StdError, io};
+use std::io;
+
+use core::error::Error as StdError;
 
 use unsigned_varint::decode;
 
